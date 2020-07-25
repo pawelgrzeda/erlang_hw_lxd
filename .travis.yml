@@ -48,3 +48,10 @@ jobs:
       - sleep 10
       - systemctl status mongodb
       - netstat -nltp
+      
+    - services: 
+      - postgresql
+      script:
+      - sleep 10
+      - systemctl status postgresql
+      - netstat -nltp
