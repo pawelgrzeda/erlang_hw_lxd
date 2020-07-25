@@ -40,7 +40,7 @@ jobs:
       script:
       - sleep 10
       - systemctl status couchdb
-      - netstat -nltp
+      - netstat -ntlp
       
     - services: 
       - mongodb
