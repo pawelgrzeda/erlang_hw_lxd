@@ -52,8 +52,9 @@ jobs:
     - services: 
       - postgresql
       script:
-      - travis_setup_postgresql 12
       - sleep 10
+      - travis_setup_postgresql 12
+      - sleep 5
       - systemctl status postgresql
       - netstat -nltp
       
