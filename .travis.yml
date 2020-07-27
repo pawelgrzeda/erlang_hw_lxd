@@ -6,6 +6,13 @@ group: dev
 
 jobs:
   include:
+     - language: perl
+       perl: 
+       - "5.33.0"
+       - "5.32.0"
+       script:
+         - perl helloworld.pl
+         
      - language: erlang
        script:
        - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
