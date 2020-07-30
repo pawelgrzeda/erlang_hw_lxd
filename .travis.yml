@@ -85,6 +85,8 @@ jobs:
        script:
        - sleep 11
        - systemctl status mysql
+       - mysql -e 'CREATE DATABASE myapp_test;'
+       - sudo mysql -e 'CREATE DATABASE myapp_test2;'
      
      - addons:
          mariadb: '10.3'
