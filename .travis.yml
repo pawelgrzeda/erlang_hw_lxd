@@ -19,6 +19,8 @@ jobs:
          - perl helloworld.pl
        
      - language: erlang
+       otp_release:
+       - 23.0
        script:
        - date
        - erl -noshell -eval 'io:fwrite("Hello, World!\n"), init:stop().'
@@ -84,14 +86,15 @@ jobs:
      - services: 
        - mysql
        script:
-       - sleep 13
+       - date
+       - sleep 12
        - systemctl status mysql
        - mysql -e 'CREATE DATABASE myapp_test;'
      
      - addons:
          mariadb: '10.3'
        script:
-       - sleep 11
+       - sleep 12
        - systemctl status mysql
        - systemctl status mariadb
        - netstat -nltp
